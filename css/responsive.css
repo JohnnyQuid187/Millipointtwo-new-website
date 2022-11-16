@@ -1,0 +1,424 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 992px) {
+	.container {
+		max-width: 128rem;
+	}
+}
+
+@media (max-width: 991px) {
+	html {
+		font-size: 55%
+	}
+
+	.title_xl {
+		font-size: 8rem;
+	}
+
+	header {
+		text-align: center;
+		padding: 2.4rem 0 3rem 0;
+	}
+
+	header .logo {
+		width: 18rem;
+	}
+
+	#menu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		padding-bottom: 1.9rem;
+	}
+
+	.product_card_info p {
+		font-size: 1rem;
+	}
+
+	.join_area {
+		background: #000000;
+		padding: 5.6rem 0 0 0;
+	}
+
+	.join_img {
+		display: block;
+	}
+
+	.gallery_area .box h1 {
+		font-size: 13rem;
+	}
+
+	.footer_logo {
+		margin-top: 5.5rem;
+	}
+
+	.footer_menu {
+		padding-top: 2.5rem;
+		text-align: left;
+	}
+
+	.right_clear {
+		padding-right: calc((100% - 720px) / 2 + 1.6rem);
+	}
+
+	.product_slider1 img,
+	.product_slider1 video {
+		height: 60rem !important;
+	}
+
+	.archive_area .title_xl {
+		font-size: 4.5rem;
+		padding-bottom: 3rem;
+	}
+
+	.archive_area .first_col {
+		padding: 0;
+	}
+
+	.archive_box {
+		text-align: center;
+		padding: 0;
+		padding-top: 4rem;
+		padding-bottom: 3rem;
+	}
+
+	.archive_box h2 {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.fashion_slider {
+		margin-right: -2rem;
+		margin-left: -1.5rem;
+	}
+
+	.fashion_house .discription {
+		padding-right: 0;
+		padding-top: 4rem;
+	}
+
+	.fashion-slider-slick-next {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.gallery_area .box {
+		padding: 4.4rem 0;
+		border-right: none;
+		border-bottom: none;
+		border: none;
+	}
+
+	.gallery_area .box:hover,
+	.gallery_area .box:hover a {
+		color: var(--text-color);
+	}
+
+	.gallery_area .box:hover .view img {
+		-webkit-filter: none;
+		filter: none;
+	}
+
+	.gallery_area .box:hover .middle a::before {
+		border-color: #000000;
+	}
+
+	
+	.gallery_area .box .middle a:hover::before{
+		border-color: #FFB21E;
+	}
+
+	.gallery_area .popup-gallery {
+		margin-top: -2rem;
+		padding-top: 0;
+		padding-bottom: 3.2rem;
+	}
+
+	.box_bg_slider {
+		display: none;
+	}
+
+	.cookies {
+		padding: 3.3rem 2.3rem 4.8rem 1.6rem;
+	}
+
+	#cookies_modal .modal-dialog {
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
+
+	.right_clear {
+		padding-right: 0;
+	}
+
+	.mpt_area {
+		padding: 0;
+	}
+
+	.mpt_area .container-fluid {
+		padding: 0;
+	}
+
+	.sub_product {
+		display: none;
+	}
+
+	.product_slider1 {
+		margin: 0 -1.5rem !important;
+	}
+
+	.product_content {
+		position: relative;
+		padding: 2.9rem 1.6rem 3.8rem 1.6rem;
+	}
+
+	.product_slider1 .slick-dots {
+		display: block !important;
+	}
+
+	.product_slider1_next_arrow {
+		display: none !important;
+	}
+
+	.product_slider1 img,
+	.product_slider1 video {
+		height: 50rem !important;
+	}
+
+	.archive_box {
+		text-align: center;
+	}
+
+	.pagination {
+		padding-top: 5rem;
+	}
+
+	.archive_area {
+		padding: 5rem 0 8rem;
+	}
+
+	.archive_area .title_xl {
+		font-size: 3.7rem;
+	}
+
+	.archive_box h2 {
+		font-size: 2.2rem;
+		padding-bottom: 1.5rem;
+	}
+}
+
+@media (max-width: 575px) {
+	html {
+		font-size: 2.66vw;
+	}
+
+	body {
+		font-size: 1.2rem;
+	}
+
+	.title_xl {
+		font-size: 4.8rem;
+	}
+
+	.title_md {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	#menu li,
+	#menu li:last-child {
+		margin: 0 .8rem;
+	}
+
+	#menu a {
+		font-size: 1rem;
+	}
+
+	.hero_content a {
+		font-size: 1rem;
+	}
+
+	.product_slider .slick-list {
+		padding-left: 0 !important;
+		padding-right: 10rem !important;
+	}
+
+	.product_card_info p {
+		font-size: .9rem;
+	}
+
+	.overly_content p {
+		font-size: .9rem;
+	}
+
+	.slide-arrow {
+		width: 4rem;
+		height: 4rem;
+		margin-left: 1rem;
+	}
+
+	.slide-arrow img {
+		width: .45rem;
+	}
+
+	.prev-arrow {
+		right: 5rem;
+	}
+
+	.fashion_house {
+		padding: 5.5rem 0 6.5rem 0;
+	}
+
+	.fashion_slider .slick-list {
+		padding-left: 0 !important;
+		padding-right: 8rem !important;
+	}
+
+	.subscribe_form input {
+		width: 100%;
+	}
+
+	.subscribe_form button {
+		margin-left: 0;
+		margin-top: 1.6rem;
+	}
+
+	.join_area .social_links {
+		margin-top: 5rem;
+	}
+
+	.gallery_area .box h1 {
+		font-size: 10rem;
+	}
+
+	.gallery_area .box p {
+		font-size: 1rem;
+	}
+
+	.gallery_area .box .middle {
+		padding-top: 3rem;
+	}
+
+	.gallery_area .box .middle a {
+		font-size: 1.5rem;
+	}
+
+	.gallery_area .box .middle a::before {
+		border-width: 1px;
+	}
+
+	.gallery_area .box .view {
+		font-size: 1rem;
+		margin-top: 2.4rem;
+	}
+
+	.gallery_area .box a img {
+		width: 1rem;
+	}
+
+	.gallery-arrow {
+		top: 2.2rem;
+	}
+
+	.footer_top {
+		padding: 3.2rem 0 6.6rem 0;
+	}
+
+	.footer_logo {
+		width: 8.5rem;
+	}
+
+	.footer_menu li {
+		padding: 0 .8rem;
+	}
+
+	.footer_menu li:nth-child(3) {
+		padding-right: 0;
+		border-right: none;
+	}
+
+	.footer_menu a {
+		font-size: .9rem;
+	}
+
+	.conditions_list li {
+		padding-bottom: 1.8rem;
+	}
+
+	.terms_conditions_inner div {
+		padding-top: 3.5rem;
+	}
+
+	.terms_conditions_inner h3 {
+		font-size: 1.2rem;
+		padding-bottom: 1.2rem;
+	}
+
+	#cookies_modal .modal-dialog {
+		padding: 1rem;
+	}
+
+	#cookies_modal .modal-content {
+		padding: 6rem 2rem 5rem 2rem;
+	}
+
+	#cookies_modal div.pb_55 {
+		padding-bottom: 4rem;
+	}
+
+	.modal_close {
+		top: 3rem;
+		right: 3rem;
+	}
+
+	#cookies_modal h3 {
+		font-size: 1.2rem;
+	}
+
+	.gallery-arrow{
+		display: flex;
+		justify-content: space-between;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.gallery-arrow-left{
+		background: url(../img/left-arrow-white.png) no-repeat center;
+		background-size: 100% 100%;
+		width: 2rem;
+		height: 2rem;
+		margin-left: 2rem !important;
+	}
+
+	.gallery-arrow-left::before{
+		display: none;
+	}
+
+	.gallery-arrow-right{
+		background: url(../img/right-arrow-white.png) no-repeat center;
+		background-size: 100% 100%;
+		width: 2rem;
+		height: 2rem;
+		margin-left: 33.5rem !important;
+
+	}
+
+	.gallery-arrow-right::before{
+		display: none;
+	}
+}
