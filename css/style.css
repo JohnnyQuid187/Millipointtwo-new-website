@@ -29,6 +29,13 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'NetworkFreeVersion';
+	src: url('../webfonts/NetworkFreeVersion.ttf');
+
+}
+
+
 
 /*====================== Basic css ========================*/
 
@@ -463,6 +470,7 @@ header .logo {
 
 .fashion_house .discription {
 	text-align: justify;
+	font-family: 'NetworkFreeVersion', sans-serif !important;
 }
 
 .fashion_slider .slick-prev {
