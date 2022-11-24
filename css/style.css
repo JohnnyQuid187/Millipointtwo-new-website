@@ -42,6 +42,8 @@
 html {
 	/* font-size: 62.5%; */
 	font-size: 0.69vw;
+	scroll-behavior: smooth;
+
 }
 
 html,
@@ -470,7 +472,6 @@ header .logo {
 
 .fashion_house .discription {
 	text-align: justify;
-	font-family: 'NetworkFreeVersion', sans-serif !important;
 }
 
 .fashion_slider .slick-prev {
