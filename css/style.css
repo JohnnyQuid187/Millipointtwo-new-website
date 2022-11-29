@@ -461,6 +461,17 @@ header .logo {
 	flex-shrink: 0;
 }
 
+.list {
+	display: block;
+	list-style-type: disc;
+	margin-top: 1em;
+	margin-bottom: 1 em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 20px;
+}
+
+
 
 /*====================== fashion area start ========================*/
 
