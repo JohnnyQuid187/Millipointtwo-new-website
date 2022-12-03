@@ -184,11 +184,6 @@ function add_FUNCTIONAL(){
 }
 
 function add_PIXEL(){
-
-}
-
-function add_GA(){
-    alert("TEST")
     !function (f, b, e, v, n, t, s) {
         if (f.fbq) return; n = f.fbq = function () {
             n.callMethod ?
@@ -202,6 +197,13 @@ function add_GA(){
         'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '466601605469092');
     fbq('track', 'PageView');
+}
+
+function add_GA(){
+    window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F5Y47SY845');
 }
 
 
