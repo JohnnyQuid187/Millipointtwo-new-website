@@ -149,7 +149,7 @@
 
 
         $('.acceptAll').click(function () {
-            document.cookie = "Millipointtwo=" + "FUNCTIONAL; ANALYTICAL; SOCIAL MEDIA AND ADVERTISING";
+            document.cookie = "Millipointtwo=" + "FUNCTIONAL, ANALYTICAL, SOCIAL MEDIA AND ADVERTISING";
             $('.cookies').removeClass('show');
             add_FUNCTIONAL();
             add_GA();
@@ -162,8 +162,8 @@
             $(".checkbox-field :input[type='checkbox']").each(function () {
                 if ($(this).is(":checked")) {
                     switch ($(this).closest('.title_box').children('h3').text()) {
-                        case 'FUNCTIONAL': add_FUNCTIONAL(); cookieValue += "FUNCTIONAL; "; break;
-                        case 'ANALYTICAL': add_GA(); cookieValue += "ANALYTICAL; "; break;
+                        case 'FUNCTIONAL': add_FUNCTIONAL(); cookieValue += "FUNCTIONAL, "; break;
+                        case 'ANALYTICAL': add_GA(); cookieValue += "ANALYTICAL, "; break;
                         case 'SOCIAL MEDIA AND ADVERTISING': add_PIXEL(); cookieValue += "SOCIAL MEDIA AND ADVERTISING"; break;
                         default: break;
                     }
@@ -252,6 +252,7 @@ function hasScrolled() {
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
+    console.log("COOKIES: ", ca)
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) == ' ') c = c.substring(1, c.length);
