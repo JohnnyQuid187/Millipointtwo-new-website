@@ -169,7 +169,7 @@
                     }
                 }
             });
-            console.log(cookieValue)
+            document.cookie = "Millipointtwo=" + cookieValue;
             $('#cookies_modal').modal('toggle');
             $('.cookies').removeClass('show')
         })
