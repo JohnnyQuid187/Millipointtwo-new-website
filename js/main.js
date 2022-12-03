@@ -1,13 +1,13 @@
 (function ($) {
     "use strict";
 
-    $(window).on('load', function(){
+    $(window).on('load', function () {
         // Prealoder
         $("#preloader").delay(700).fadeOut("slow");
     });
 
     $(document).ready(function () {
-                                    
+
 
         // product slider Initialize
         $('.product_slider').slick({
@@ -100,7 +100,7 @@
             nextArrow: $('.product_slider1_next'),
             dots: true,
         });
-        
+
 
 
         // magnific Popup Initialize
@@ -125,7 +125,7 @@
                         },
                         buildControls: function () {
                             // re-appends controls inside the main container
-                            if( window.screen.width > 767){
+                            if (window.screen.width > 767) {
                                 this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
                             }
                         }
@@ -134,12 +134,12 @@
             });
 
             var arrowWidth = 30;
-            var arrowGap = 20;  
+            var arrowGap = 20;
 
             function galleryArrowPosition() {
-                var contWidth = $('.mfp-content').width(); 
+                var contWidth = $('.mfp-content').width();
                 var left = contWidth / 2 + arrowGap + arrowWidth;
-                var right = contWidth / 2 + arrowGap; 
+                var right = contWidth / 2 + arrowGap;
                 $('.gallery-arrow-left').css('margin-left', '-' + left + 'px');
                 $('.gallery-arrow-right').css('margin-left', right + 'px');
             }
@@ -147,9 +147,9 @@
 
 
 
-        
-        $('.acceptAll').click(function(){
-            document.cookie = "Millipointtwo=" + "cookieValue"+`; expires=${new Date()}; path=/`;
+
+        $('.acceptAll').click(function () {
+            document.cookie = "Millipointtwo=" + "FUNCTIONAL; ANALYTICAL; SOCIAL MEDIA AND ADVERTISING";
             $('.cookies').removeClass('show');
             add_FUNCTIONAL();
             add_GA();
@@ -162,9 +162,9 @@
             $(".checkbox-field :input[type='checkbox']").each(function () {
                 if ($(this).is(":checked")) {
                     switch ($(this).closest('.title_box').children('h3').text()) {
-                        case 'FUNCTIONAL': add_FUNCTIONAL(); break;
-                        case 'ANALYTICAL': add_GA(); break;
-                        case 'SOCIAL MEDIA AND ADVERTISING': add_PIXEL(); break;
+                        case 'FUNCTIONAL': add_FUNCTIONAL(); cookieValue += "FUNCTIONAL; "; break;
+                        case 'ANALYTICAL': add_GA(); cookieValue += "ANALYTICAL; "; break;
+                        case 'SOCIAL MEDIA AND ADVERTISING': add_PIXEL(); cookieValue += "SOCIAL MEDIA AND ADVERTISING"; break;
                         default: break;
                     }
                 }
@@ -174,16 +174,18 @@
             $('.cookies').removeClass('show')
         })
 
+        if (getCookie("Millipointtwo"))
+            $('.cookies').removeClass('show');
 
     });
 
 })(jQuery);
 
-function add_FUNCTIONAL(){
+function add_FUNCTIONAL() {
 
 }
 
-function add_PIXEL(){
+function add_PIXEL() {
     !function (f, b, e, v, n, t, s) {
         if (f.fbq) return; n = f.fbq = function () {
             n.callMethod ?
@@ -199,52 +201,63 @@ function add_PIXEL(){
     fbq('track', 'PageView');
 }
 
-function add_GA(){
+function add_GA() {
     window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-F5Y47SY845');
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-F5Y47SY845');
 }
 
 
-    // Stickt Header --------
+// Stickt Header --------
 
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 5;
-    var navbarHeight = $('header').outerHeight();
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
 
-    $(window).scroll(function (event) {
-        didScroll = true;
-    });
+$(window).scroll(function (event) {
+    didScroll = true;
+});
 
-    setInterval(function () {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
-        }
-    }, 250);
-
-    function hasScrolled() {
-        var st = $(this).scrollTop();
-
-        // Make sure they scroll more than delta
-        if (Math.abs(lastScrollTop - st) <= delta)
-            return;
-
-        // If they scrolled down and are past the navbar, add class .nav-up.
-        // This is necessary so you never see what is "behind" the navbar.
-        if (st > lastScrollTop && st > navbarHeight) {
-            // Scroll Down
-            $('header').removeClass('nav-down').addClass('nav-up');
-        } else {
-            // Scroll Up
-            if (st + $(window).height() < $(document).height()) {
-                $('header').removeClass('nav-up').addClass('nav-down');
-            }
-        }
-
-        lastScrollTop = st;
+setInterval(function () {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
     }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if (Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight) {
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if (st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+
+    lastScrollTop = st;
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
 
 
