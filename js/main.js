@@ -150,7 +150,10 @@
         
         $('.acceptAll').click(function(){
             document.cookie = "Millipointtwo=" + "cookieValue"+`; expires=${new Date()}; path=/`;
-            $('.cookies').removeClass('show')
+            $('.cookies').removeClass('show');
+            add_FUNCTIONAL();
+            add_GA();
+            add_PIXEL();
         });
 
 
@@ -159,15 +162,14 @@
             $(".checkbox-field :input[type='checkbox']").each(function () {
                 if ($(this).is(":checked")) {
                     switch ($(this).closest('.title_box').children('h3').text()) {
-                        case 'FUNCTIONAL': cookieValue += 'FUNCTIONAL;'; break;
-                        case 'ANALYTICAL': cookieValue += 'ANALYTICAL;'; break;
-                        case 'SOCIAL MEDIA AND ADVERTISING': cookieValue += 'SOCIAL MEDIA AND ADVERTISING'; break;
+                        case 'FUNCTIONAL': add_FUNCTIONAL(); break;
+                        case 'ANALYTICAL': add_GA(); break;
+                        case 'SOCIAL MEDIA AND ADVERTISING': add_PIXEL(); break;
                         default: break;
                     }
                 }
             });
             console.log(cookieValue)
-            document.cookie = "Millipointtwo=" + cookieValue+"; expires=Thu, 18 Dec 2022 12:00:00 UTC; path=/";
             $('#cookies_modal').modal('toggle');
             $('.cookies').removeClass('show')
         })
@@ -177,8 +179,30 @@
 
 })(jQuery);
 
+function add_FUNCTIONAL(){
 
+}
 
+function add_PIXEL(){
+
+}
+
+function add_GA(){
+    alert("TEST")
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '466601605469092');
+    fbq('track', 'PageView');
+}
 
 
     // Stickt Header --------
