@@ -149,9 +149,28 @@
 
         
         $('.acceptAll').click(function(){
+            document.cookie = "Millipointtwo=" + "cookieValue"+`; expires=${new Date()}; path=/`;
             $('.cookies').removeClass('show')
         });
 
+
+        $('.modal-content .btn').click(function () {
+            let cookieValue = ''
+            $(".checkbox-field :input[type='checkbox']").each(function () {
+                if ($(this).is(":checked")) {
+                    switch ($(this).closest('.title_box').children('h3').text()) {
+                        case 'FUNCTIONAL': cookieValue += 'FUNCTIONAL;'; break;
+                        case 'ANALYTICAL': cookieValue += 'ANALYTICAL;'; break;
+                        case 'SOCIAL MEDIA AND ADVERTISING': cookieValue += 'SOCIAL MEDIA AND ADVERTISING'; break;
+                        default: break;
+                    }
+                }
+            });
+            console.log(cookieValue)
+            document.cookie = "Millipointtwo=" + cookieValue+"; expires=Thu, 18 Dec 2022 12:00:00 UTC; path=/";
+            $('#cookies_modal').modal('toggle');
+            $('.cookies').removeClass('show')
+        })
 
 
     });
